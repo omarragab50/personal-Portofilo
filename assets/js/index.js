@@ -533,3 +533,83 @@ scrollToTop.addEventListener("click", function () {
     applyColors(savedColors);
 
     })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // nav bar
+    
+var menuBtn = document.getElementById("mobile-menu-btn");
+var navLinks = document.getElementById("nav-links");
+
+menuBtn.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+
+    var isOpen = navLinks.classList.contains("active");
+
+    menuBtn.setAttribute("aria-expanded", isOpen);
+    menuBtn.setAttribute(
+        "aria-label",
+        isOpen ? "إغلاق القائمة" : "فتح القائمة"
+    );
+
+    menuBtn.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    // إغلاق القائمة بعد الضغط على أي لينك
+    navLinks.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "فتح القائمة");
+        menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    });
+    });

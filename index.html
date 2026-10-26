@@ -129,7 +129,7 @@
             عمر محمد رجب
           </div>
         </div>
-        <div class="nav-links flex gap-8 items-center" role="menubar">
+        <div id="nav-links" class="nav-links flex gap-8 items-center" role="menubar">
           <a
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#hero-section"
@@ -191,6 +191,17 @@
             </span>
           </button>
         </div>
+        <!-- زرار فتح القائمة: حطه بعد nav-links -->
+        <button
+          id="mobile-menu-btn"
+          class="mobile-menu-btn text-2xl p-2 bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
+          type="button"
+          aria-label="فتح القائمة"
+          aria-controls="nav-links"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </nav>
 
